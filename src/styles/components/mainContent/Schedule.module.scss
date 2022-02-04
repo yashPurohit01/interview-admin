@@ -1,0 +1,165 @@
+@use "../../utility/variable" as *;
+@use "../../utility/helper" as *;
+
+// Main Home Content
+.intro {
+	@include flexCol(flex-start, flex-start);
+	gap: 20px;
+
+	width: 100%;
+	height: fit-content;
+	@include paddingVertical(0, 50px);
+
+	// Start - Common Styles
+	& * {
+		transition: all 0.1s linear;
+	}
+
+	& .icon {
+		transition: none;
+	}
+
+	& :is(button, input) {
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+
+	& :is(h1, h2, h3, h4, h5, h6, p, a) {
+		color: var(--clr_blueDark);
+	}
+	// End - Common Styles
+
+	// Heading
+	& .head {
+		@include gridCol((55fr 45fr), center, flex-end);
+		gap: 100px;
+
+		width: 100%;
+
+		& .details {
+			font-size: 1.75rem;
+			font-weight: var(--fw_semiBold);
+
+			width: 100%;
+		}
+
+		& .filter {
+			@include flex(center, flex-start);
+			gap: 20px;
+
+			width: 100%;
+
+			& .title {
+				font-size: 1.25rem;
+				font-weight: var(--fw_medium);
+			}
+
+			& .input {
+				@include gridCol((repeat(2, 1fr)), center, center);
+				gap: 7px;
+
+				width: 100%;
+
+				& .parameter {
+					font-size: 0.9rem;
+					color: var(--clr_blueDark);
+					font-weight: var(--fw_medium);
+
+					width: 100%;
+					height: 45px;
+					padding: 0 10px;
+					border-radius: 5px;
+					border: 2px dashed var(--clr_blueDark);
+					background-color: var(--clr_blueLight);
+
+					&::placeholder {
+						font-size: 0.9rem;
+						color: var(--clr_blueDark);
+					}
+
+					&::-webkit-inner-spin-button,
+					&::-webkit-outer-spin-button {
+						background-color: var(--clr_blue);
+					}
+				}
+			}
+		}
+	}
+
+	// Meeting List
+	& .meetingList {
+		@include flexCol(flex-start, flex-start);
+		gap: 40px;
+
+		width: 100%;
+		height: 100%;
+
+		// Groups
+		& .group {
+			@include flexCol(flex-start, flex-start);
+			gap: 15px;
+
+			width: 100%;
+			height: 100%;
+
+			// Timeline
+			& .timeline .details {
+				font-size: 1.3rem;
+				font-weight: var(--fw_semiBold);
+			}
+
+			// Each Group By Time
+			& .itemsContainer {
+				@include flex(flex-start, flex-start);
+				gap: 15px;
+				flex-wrap: wrap;
+
+				// Individual Items
+				& .item {
+					flex-basis: content;
+					@include flexCol(center, center);
+					gap: 15px;
+
+					padding: 30px 35px;
+					border-radius: 5px;
+					background-color: var(--clr_white);
+					border: 3.5px solid var(--clr_greyLight);
+
+					&:is(:hover, :focus) {
+						border-color: var(--clr_blue);
+						background-color: var(--clr_blueLight);
+					}
+
+					& .image {
+						width: 55px;
+						height: 55px;
+					}
+					& .details {
+						@include flexCol(center, center);
+						gap: 1px;
+
+						& .title {
+							font-size: 1.05rem;
+							font-weight: var(--fw_semiBold);
+							text-align: center;
+							padding: 0 0 7px 0;
+						}
+
+						& :is(.category, .time) {
+							font-size: 0.95rem;
+							font-weight: var(--fw_medium);
+							line-height: 1.3rem;
+							text-align: center;
+							color: var(--clr_blue);
+						}
+
+						& .time {
+							color: var(--clr_greenDark);
+						}
+					}
+				}
+			}
+		}
+	}
+}

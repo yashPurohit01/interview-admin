@@ -1,0 +1,120 @@
+@use "../../utility/variable" as *;
+@use "../../utility/helper" as *;
+
+// Main Home Content
+.intro {
+	@include flexCol(flex-start, flex-start);
+	gap: 20px;
+
+	width: 100%;
+	height: fit-content;
+	@include paddingVertical(0, 60px);
+
+	// Start - Common Styles
+	& * {
+		transition: all 0.1s linear;
+	}
+
+	& .icon {
+		transition: none;
+	}
+
+	& button {
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+
+	& :is(h1, h2, h3, h4, h5, h6, p, a) {
+		color: var(--clr_blueDark);
+	}
+	// End - Common Styles
+
+	// Heading
+	& .head {
+		& .details {
+			font-size: 1.75rem;
+			font-weight: var(--fw_semiBold);
+		}
+	}
+
+	// Meeting List
+	& .jobList {
+		@include gridCol((50fr 50fr), stretch, flex-start);
+		gap: 20px;
+
+		width: 100%;
+		height: 100%;
+
+		& .itemsContainer {
+			width: 100%;
+			height: 100%;
+
+			// Individual Items
+			& .item {
+				@include flex(center, flex-start);
+				gap: 25px;
+
+				width: 100%;
+				height: 100%;
+				padding: 15px 40px;
+				border-radius: 5px;
+				background-color: var(--clr_white);
+				border: 3.5px solid var(--clr_greyLight);
+
+				&:is(:hover, :focus) {
+					border-color: var(--clr_blue);
+					background-color: var(--clr_blueLight);
+				}
+
+				& .icon {
+					width: 25px;
+					height: 25px;
+					color: var(--clr_blue);
+				}
+
+				& .details {
+					@include flexCol(flex-start, center);
+
+					width: 100%;
+					height: 100%;
+
+					& .title {
+						font-size: 1.1rem;
+						font-weight: var(--fw_semiBold);
+						text-align: left;
+					}
+
+					& :is(.type, .experience) {
+						font-size: 1rem;
+						font-weight: var(--fw_medium);
+						text-align: left;
+					}
+
+					& .type {
+						color: var(--clr_green);
+						font-weight: var(--fw_semiBold);
+					}
+
+					& .experience {
+						color: var(--clr_blue);
+
+						& .field {
+							font-weight: var(--fw_semiBold);
+						}
+					}
+
+					& .data {
+						font-size: 0.95rem;
+						font-weight: var(--fw_medium);
+						text-align: left;
+
+						& .field {
+							font-weight: var(--fw_semiBold);
+						}
+					}
+				}
+			}
+		}
+	}
+}

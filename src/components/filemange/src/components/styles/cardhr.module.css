@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  grid-template-rows: 0.3fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "";
+  margin-left: 9rem;
+  margin-top: 0.95rem;
+}
+
+.containeropn {
+  display: grid;
+  grid-template-rows: 0.3fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "";
+  margin-left: 19rem;
+  margin-top: 0.95rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 60px;
+  width: 49rem;
+  border-radius: 10px;
+}
+
+.card h5 {
+  margin-left: 15px;
+}
+
+.icn {
+  width: 35px;
+  margin-left: 30rem;
+}

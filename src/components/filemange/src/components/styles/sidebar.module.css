@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+.navside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  width: 70px;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  background-color: whitesmoke;
+  overflow: hidden;
+
+}
+
+.navsideopn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  width: 270px;
+  position: fixed;
+  top: 65px;
+  left: 0;
+  background-color: whitesmoke;
+  overflow: hidden;
+}
+
+.navside i {
+  font-size: 30px;
+  color: #343434;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.navsideopn i {
+  font-size: 30px;
+  color: #343434;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+.navside ul,
+.navside .end {
+  display: flex;
+}
+
+.navside ul {
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  height: auto;
+}
+
+.navside a {
+  text-decoration: none;
+}
+
+.navsideopn ul,
+.navsideopn .end {
+  display: flex;
+}
+
+.navsideopn ul {
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  height: auto;
+}
+
+.navsideopn a {
+  text-decoration: none;
+}
+
+.navside li {
+  list-style-type: none;
+  display: flex;
+  width: 150px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.navside p {
+  width: 75px;
+  font-size: 18px;
+  padding-left: 0;
+  color: #343434;
+}
+
+.navside ul a:nth-of-type(1):hover i {
+  color: #a0522d;
+}
+
+.navside ul a:nth-of-type(2):hover i {
+  color: #e1c16e;
+}
+
+.navside ul a:nth-of-type(3):hover i {
+  color: #f28c28;
+}
+
+.navside ul a:nth-of-type(4):hover i {
+  color: #87ceeb;
+}
+
+.navside ul a:nth-of-type(5):hover i {
+  color: #50c878;
+}
+
+.navsideopn li {
+  list-style-type: none;
+  display: flex;
+  width: 150px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+.navsideopn p {
+  font-size: 18px;
+  padding-left: 0;
+  color: #343434;
+}
+
+.navsideopn ul a:nth-of-type(1):hover i {
+  color: #a0522d;
+}
+
+.navsideopn ul a:nth-of-type(2):hover i {
+  color: #e1c16e;
+}
+
+.navsideopn ul a:nth-of-type(3):hover i {
+  color: #f28c28;
+}
+
+.navsideopn ul a:nth-of-type(4):hover i {
+  color: #87ceeb;
+}
+
+.navsideopn ul a:nth-of-type(5):hover i {
+  color: #50c878;
+}
+
+.navside .end {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  padding: 10px 17px;
+}
+
+.end p {
+  width: 75px;
+  font-size: 18px;
+  padding-left: 30px;
+  color: #343434;
+}
+
+.navside a:hover i {
+  color: #5c5c5c;
+}
+
+.navsideopn .end {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  padding: 10px 17px;
+}
+
+.navsideopn a:hover i {
+  color: #5c5c5c;
+}
+
+
+.navside #btn1{
+  padding-left: 20px;
+}
+
+.navsideopn #btn1{
+  padding-left: 14rem;
+}
+
+
+.navside .docbut p{
+  display: none
+  
+}
+.navside .docbut{
+  margin-left: 3px;
+
+  align-self: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  height: 40px;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px black;
+  
+}
+
+.docbut{
+  cursor: pointer;
+
+}
+
+
+.navsideopn .docbut{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 30px;
+
+  background-color: rgb(255, 255, 255);
+  margin-left: 30px;
+  height: 60px;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px black;
+  
+}
+
+.addDoc{
+  background: none;
+  width: 35px;
+  height: 40px;
+  border: none;
+  
+}
+
+.navsideopn .docbut:hover i {
+  color: #5080c8;
+}
+
+.navside .docbut:hover i {
+  color: #5080c8;
+}

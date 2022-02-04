@@ -1,0 +1,127 @@
+@use "../../utility/variable" as *;
+@use "../../utility/helper" as *;
+
+// Main Home Content
+.intro {
+	@include flexCol(center, flex-start);
+
+	width: 100%;
+	height: 100%;
+	@include paddingVertical(15px, 50px);
+
+	// Start - Common Styles
+	& * {
+		transition: all 0.1s linear;
+	}
+
+	& .icon {
+		transition: none;
+	}
+
+	& button {
+		border: none;
+		outline: none;
+		cursor: pointer;
+	}
+	// End - Common Styles
+
+	// Account Holder Profile
+	& .profile {
+		@include gridCol((200px 100fr), center, center);
+		gap: 40px;
+
+		width: 100%;
+		height: fit-content;
+		padding: 0 15px 30px 15px;
+
+		// Profile Image
+		& .imageContainer {
+			height: 200px;
+
+			& .image {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 10px;
+			}
+		}
+
+		// Interview Details
+		& .text {
+			@include flexCol(center, center);
+			gap: 20px;
+
+			width: 100%;
+			height: 340px;
+			padding: 30px 40px;
+			border-radius: 15px;
+			background-color: var(--clr_white);
+			box-shadow: 4px 4px 30px var(--clr_blueShadowLight);
+
+			// Informations
+			& .details {
+				font-size: 1.5rem;
+				font-weight: var(--fw_semiBold);
+				color: var(--clr_blueDark);
+			}
+		}
+	}
+
+	// Highlighted Links
+	& .link {
+		@include flex(flex-start, flex-start);
+		flex-wrap: wrap;
+		gap: 15px;
+
+		width: 100%;
+		height: fit-content;
+		padding: 15px;
+
+		// Individual Buttons
+		& .btn {
+			@include flex(center, flex-start);
+			gap: 17px;
+
+			flex-basis: calc(33.33% - 10px);
+			border-radius: 5px;
+			padding: 25px;
+			background-color: var(--clr_white);
+			box-shadow: 4px 4px 15px var(--clr_blueShadowLight);
+
+			&:is(:hover, :focus) {
+				background-color: var(--clr_blue);
+			}
+
+			// Icon
+			& .icon {
+				width: 18px;
+				height: 18px;
+				color: var(--clr_blue);
+			}
+
+			// Text Inside The Button
+			& .text {
+				@include flexCol(flex-start, center);
+
+				& :is(.title, .subTitle) {
+					text-align: left;
+				}
+
+				& .title {
+					font-size: 1.1rem;
+					font-weight: var(--fw_medium);
+					color: var(--clr_blueDark);
+				}
+
+				& .subTitle {
+					font-size: 0.9rem;
+					color: var(--clr_grey);
+				}
+			}
+
+			&:is(:hover, :focus) :is(.text :is(.title, .subTitle), .icon) {
+				color: var(--clr_white);
+			}
+		}
+	}
+}
